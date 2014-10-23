@@ -1,0 +1,31 @@
+{
+  "name": "write-transpiled",
+  "description": "write transpiled",
+  "version": "0.0.1",
+  "author": "Mike Harris <mharris717@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mharris717/write-transpiled"
+  },
+  "license": "MIT",
+  "binzz": {
+    "broccoli": "bin/write-transpiled"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "preferGlobal": true,
+
+  "dependencies": {
+    "broccoli-es6-module-transpiler": "mmun/broccoli-es6-module-transpiler#transpiler-0.4",
+    "es6-module-transpiler": "~0.4.0",
+    "broccoli-static-compiler": "",
+    "broccoli-merge-trees": "",
+    "grunt": "",
+    "grunt-broccoli": ""
+  },
+
+  "keywords": [
+    "gruntplugin"
+  ]
+}
