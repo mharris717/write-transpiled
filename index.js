@@ -1,35 +1,37 @@
-var setupGrunt = function(grunt) {
+var setupGrunt = function(grunt,appName) {
   grunt.loadNpmTasks('grunt-broccoli')
   grunt.initConfig({
     broccoli: {
       transpiled: {
         dest: "transpiled_js",
-        config: require("./lib/make-tree")
+        config: function(rootPath) {
+          return require("./lib/make-tree")(rootPath,appName);
+        }
       }
     }
   })
 };
 
 if (true) {
-  var makeTree = require("./lib/make-tree")
-  var brocProg = require("./broc_prog")
+  // var makeTree = require("./lib/make-tree")
+  // var brocProg = require("./broc_prog")
 
-  var sup = {
-    name: "wt:hello",
+  // var sup = {
+  //   name: "wt:hello",
 
-    run: function() {
-      console.log("hello from write-transpiled");
-      //return brocProg('app')
-    }
-  };
+  //   run: function() {
+  //     console.log("hello from write-transpiled");
+  //     //return brocProg('app')
+  //   }
+  // };
 
-  var write = {
-    name: "write-transpiled",
+  // var write = {
+  //   name: "write-transpiled",
 
-    run: function() {
+  //   run: function() {
       
-    }
-  }
+  //   }
+  // }
 
   // var big = {
   //   name: 'cordova:build',
@@ -54,9 +56,9 @@ if (true) {
       console.log("in write-transpiled included")
     },
 
-    includedCommands: function() {
-      return [sup]
-    },
+    // includedCommands: function() {
+    //   return [sup]
+    // },
 
     setupGrunt: setupGrunt
   }
