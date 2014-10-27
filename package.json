@@ -15,7 +15,6 @@
     "node": ">= 0.10.0"
   },
   "preferGlobal": true,
-
   "dependencies": {
     "broccoli-es6-module-transpiler": "mmun/broccoli-es6-module-transpiler#transpiler-0.4",
     "es6-module-transpiler": "~0.4.0",
@@ -24,8 +23,13 @@
     "grunt": "",
     "grunt-broccoli": ""
   },
-
   "keywords": [
-    "gruntplugin"
-  ]
+    "gruntplugin",
+    "ember-addon"
+  ],
+  "devDependencies": {
+    "broccoli": "^0.13.2",
+    "copy-dereference": "^1.0.0",
+    "ncp": "^1.0.1"
+  }
 }
