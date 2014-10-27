@@ -3,7 +3,7 @@ var setupGrunt = function(grunt) {
   grunt.initConfig({
     broccoli: {
       transpiled: {
-        dest: "transpiled_js3",
+        dest: "transpiled_js",
         config: require("./lib/make-tree")
       }
     }
