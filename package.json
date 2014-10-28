@@ -19,20 +19,19 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "broccoli-es6-module-transpiler": "mmun/broccoli-es6-module-transpiler#transpiler-0.4",
-    "es6-module-transpiler": "~0.4.0",
-    "broccoli-static-compiler": "",
-    "broccoli-merge-trees": "",
-    "grunt": "",
-    "grunt-broccoli": "",
     "broccoli": "^0.13.2",
-    "copy-dereference": "^1.0.0"
+    "broccoli-es6-module-transpiler": "mmun/broccoli-es6-module-transpiler#transpiler-0.4",
+    "broccoli-merge-trees": "",
+    "broccoli-static-compiler": "",
+    "commander": "^2.5.0",
+    "copy-dereference": "^1.0.0",
+    "es6-module-transpiler": "~0.4.0",
+    "grunt": "",
+    "grunt-broccoli": ""
   },
   "keywords": [
     "gruntplugin",
     "ember-addon"
   ],
-  "devDependencies": { 
-    
-  }
+  "devDependencies": {}
 }

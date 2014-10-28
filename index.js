@@ -1,53 +1,15 @@
 var setupGrunt = require("./lib/setup-grunt");
 
-if (true) {
-  // var makeTree = require("./lib/make-tree")
-  // var brocProg = require("./broc_prog")
+module.exports = {
+  name: "write-transpiled", 
 
-  // var sup = {
-  //   name: "wt:hello",
+  included: function() {
+    console.log("in write-transpiled included")
+  },
 
-  //   run: function() {
-  //     console.log("hello from write-transpiled");
-  //     //return brocProg('app')
-  //   }
-  // };
+  // includedCommands: function() {
+  //   return [sup]
+  // },
 
-  // var write = {
-  //   name: "write-transpiled",
-
-  //   run: function() {
-      
-  //   }
-  // }
-
-  // var big = {
-  //   name: 'cordova:build',
-  //   aliases: ['cdv:build'],
-  //   description: 'Build the ember and cordova project together running in the simulator or on a device',
-  //   works: 'insideProject',
-
-  //   availableOptions: [
-  //     { name: 'environment', type: String, default: 'development' },
-  //     { name: 'platform', type: String, default: 'ios' }
-  //   ],
-
-  //   run: function() {
-  //     console.log("cordova run");
-  //   }
-  // };
-
-  module.exports = {
-    name: "write-transpiled", 
-
-    included: function() {
-      console.log("in write-transpiled included")
-    },
-
-    // includedCommands: function() {
-    //   return [sup]
-    // },
-
-    setupGrunt: setupGrunt
-  }
+  setupGrunt: setupGrunt
 }

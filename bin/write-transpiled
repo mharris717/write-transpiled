@@ -1,12 +1,20 @@
 #!/usr/bin/env node
 
+var program = require('commander');
+
+program
+  .option('-s, --source <path>', 'Source Path','.')
+  .option('-o, --output <path>', 'Output Path','transpiled_js')
+  .option('-a, --appname <name>', 'App Name','myapp')
+  .parse(process.argv)
+
 var writeTree = require("../lib/write-tree");
 
 //var rootPath = "./test/dummy";
-var rootPath = "."
-var destPath = "built_js";
-var appName = "myapp";
+var rootPath = program.source;
+var destPath = program.output;
+var appName = program.appname;
 
 writeTree(rootPath,destPath,appName).then(function() {
-  console.log("wrote tree")
+  console.log("wrote transpiled "+rootPath+" to "+destPath);
 });
