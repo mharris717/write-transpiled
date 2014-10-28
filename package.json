@@ -14,6 +14,11 @@
   "engines": {
     "node": ">= 0.10.0"
   },
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "qunit -c ./lib/make-tree.js -t ./test/smoke-test.js"
+  },
   "preferGlobal": true,
   "dependencies": {
     "broccoli-es6-module-transpiler": "mmun/broccoli-es6-module-transpiler#transpiler-0.4",
@@ -21,15 +26,15 @@
     "broccoli-static-compiler": "",
     "broccoli-merge-trees": "",
     "grunt": "",
-    "grunt-broccoli": ""
+    "grunt-broccoli": "",
+    "broccoli": "^0.13.2",
+    "copy-dereference": "^1.0.0"
   },
   "keywords": [
     "gruntplugin",
     "ember-addon"
   ],
   "devDependencies": {
-    "broccoli": "^0.13.2",
-    "copy-dereference": "^1.0.0",
-    "ncp": "^1.0.1"
+    
   }
 }

@@ -1,16 +1,4 @@
-var setupGrunt = function(grunt,appName) {
-  grunt.loadNpmTasks('grunt-broccoli')
-  grunt.initConfig({
-    broccoli: {
-      transpiled: {
-        dest: "transpiled_js",
-        config: function(rootPath) {
-          return require("./lib/make-tree")(rootPath,appName);
-        }
-      }
-    }
-  })
-};
+var setupGrunt = require("./lib/setup-grunt");
 
 if (true) {
   // var makeTree = require("./lib/make-tree")
