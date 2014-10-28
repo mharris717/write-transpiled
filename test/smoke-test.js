@@ -26,3 +26,28 @@ asyncTest("build tree", function() {
     });
   });
 })
+
+var exec = require('child_process').exec
+
+var getTmpDir = function() {
+  var i = parseInt(Math.random()*10000000000.0)
+  return "tmp/"+i
+}
+
+asyncTest("call bin - smoke", function() {
+  exec("echo abc", function(error,stdout,stderr) {
+    equal(stdout.trim(),"abc")
+    QUnit.start()
+  })
+})
+
+asyncTest("call bin", function() {
+  var outputDir = getTmpDir()
+  exec("./bin/write-transpiled --source ./test/dummy --output "+outputDir, function(error,stdout,stderr) {
+    fs.readFile(outputDir+'/myapp/models/post.js', {encoding: "UTF-8"}, function (err, data) {
+      if (err) throw err;
+      equal(data,transpiledPost);
+      QUnit.start()
+    });
+  })
+})
