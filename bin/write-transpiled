@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var writeTree = require("../lib/write-tree");
+
+//var rootPath = "./test/dummy";
+var rootPath = "."
+var destPath = "built_js";
+var appName = "myapp";
+
+writeTree(rootPath,destPath,appName).then(function() {
+  console.log("wrote tree")
+});

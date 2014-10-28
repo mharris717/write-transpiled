@@ -8,15 +8,13 @@
     "url": "https://github.com/mharris717/write-transpiled"
   },
   "license": "MIT",
-  "binzz": {
-    "broccoli": "bin/write-transpiled"
+  "bin": {
+    "write-transpiled": "bin/write-transpiled"
   },
   "engines": {
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "start": "ember server",
-    "build": "ember build",
     "test": "qunit -c ./lib/make-tree.js -t ./test/smoke-test.js"
   },
   "preferGlobal": true,
