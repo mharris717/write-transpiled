@@ -34,7 +34,7 @@
     "gruntplugin",
     "ember-addon"
   ],
-  "devDependencies": {
+  "devDependencies": { 
     
   }
 }
